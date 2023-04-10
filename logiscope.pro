@@ -11,4 +11,6 @@ SOURCES += \
 
 HEADERS += \
     src/component/authentication.h \
-    src/mainwindow.h
+    src/db/manager.h \
+    src/mainwindow.h \
+    src/utility/instance.h
