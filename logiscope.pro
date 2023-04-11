@@ -10,12 +10,14 @@ TRANSLATIONS = \
 
 SOURCES += \
     src/component/authentication.cpp \
+    src/component/translator.cpp \
     src/main.cpp \
     src/mainwindow.cpp \
     src/translation.cpp
 
 HEADERS += \
     src/component/authentication.h \
+    src/component/translator.h \
     src/db/manager.h \
     src/global.h \
     src/mainwindow.h \
