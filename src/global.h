@@ -25,7 +25,7 @@ namespace lgs::global {
 
     const QString IMG = ASSETS + "/img";
 
-    const QString STYLE = ASSETS + "/img";
+    const QString STYLE = ASSETS + "/style";
 
     const QString DATA = ASSETS + "/data";
 
