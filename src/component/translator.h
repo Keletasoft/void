@@ -2,6 +2,9 @@
 #define TRANSLATOR_H
 #include <QWidget>
 #include <QStringList>
+#include <QDir>
+
+#include "../global.h"
 
 /**
  * @namespace lgs::component
@@ -24,7 +27,7 @@ class Translator : public QWidget
         bool isValid(const QString &locale);
 
     signals :
-        void change(QLocale local)
+        void change(QLocale local);
 };
 
 } // END NAMESPACE lgs::component
