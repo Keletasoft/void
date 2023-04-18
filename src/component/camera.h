@@ -12,7 +12,7 @@ namespace lgs::componnent
 /**
  * @brief The Camera class
  */
-class Camera
+class Camera : public QWidget
 {
     Q_OBJECT
 

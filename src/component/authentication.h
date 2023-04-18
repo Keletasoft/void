@@ -10,7 +10,7 @@ namespace lgs::component {
 /**
  * @brief The Register class
  */
-class Register
+class Register : public QWidget
 {
     Q_OBJECT
 
@@ -55,7 +55,7 @@ class Register
 /**
  * @brief The Login class
  */
-class Login
+class Login : public QWidget
 {
     Q_OBJECT
 
@@ -100,7 +100,7 @@ class Login
 /**
  * @brief Authentication tab
  */
-class Authentication
+class Authentication : QWidget
 {
     Q_OBJECT
 

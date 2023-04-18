@@ -10,7 +10,7 @@ namespace lgs {
 /**
  * @brief The Form class
  */
-class Form
+class Form : public QWidget
 {
     Q_OBJECT
 
