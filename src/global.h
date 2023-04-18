@@ -31,6 +31,8 @@ namespace lgs::global {
 
     const QString TMP = ASSETS + "/tmp";
 
+    const QString LOG = ASSETS + "/logs";
+
 } // END NAMESPACE lgs
 
 #endif // GLOBAL_H
