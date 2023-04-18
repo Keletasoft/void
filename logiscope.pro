@@ -15,7 +15,8 @@ SOURCES += \
     src/form.cpp \
     src/main.cpp \
     src/mainwindow.cpp \
-    src/translation.cpp
+    src/translation.cpp \
+    src/utility/logger.cpp
 
 HEADERS += \
     src/component/authentication.h \
@@ -26,4 +27,5 @@ HEADERS += \
     src/global.h \
     src/mainwindow.h \
     src/translation.h \
-    src/utility/instance.h
+    src/utility/instance.h \
+    src/utility/logger.h
