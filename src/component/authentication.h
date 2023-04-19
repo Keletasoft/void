@@ -4,6 +4,7 @@
 #include <QWidget>
 #include <QLineEdit>
 #include <QPushButton>
+#include <QVBoxLayout>
 
 namespace lgs::component {
 
@@ -15,9 +16,10 @@ class Register : public QWidget
     Q_OBJECT
 
     private :
+        QLineEdit *companyCode;
+        QLineEdit *name;
         QLineEdit *email;
         QLineEdit *password;
-        QLineEdit *name;
         // ... etc
 
     public :
@@ -62,6 +64,7 @@ class Login : public QWidget
     private :
         QLineEdit *companyCode;
         QLineEdit *name;
+        QLineEdit *email;
         QLineEdit *password;
 
     public :
@@ -100,7 +103,7 @@ class Login : public QWidget
 /**
  * @brief Authentication tab
  */
-class Authentication : QWidget
+class Authentication : public QWidget
 {
     Q_OBJECT
 
@@ -120,6 +123,12 @@ class Authentication : QWidget
          * @brief ~Authentication
          */
         virtual ~Authentication() noexcept;
+
+        /**
+         * @brief isAuthenticated
+         * @return
+         */
+        bool isAuthenticated() const;
 
     private slots :
 
