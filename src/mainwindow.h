@@ -2,6 +2,9 @@
 #define MAINWINDOW_H
 #include <QMainWindow>
 
+#include "component/authentication.h"
+#include "form.h"
+
 /**
  * @namespace lgs
  */
@@ -13,6 +16,10 @@ namespace lgs {
 class MainWindow : public QMainWindow
 {
     Q_OBJECT
+
+    private :
+       lgs::component::Authentication *authentication;
+       lgs::Form *form;
 
     public :
 
