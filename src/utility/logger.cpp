@@ -31,31 +31,30 @@ QString lgs::utility::Logger::format(LEVEL_EC level_ec, const QString &message)
     }
 
     return QString(
-        "[" + QDateTime::currentDateTimeUtc().toString() + "]" +
+        "[" + QDateTime::currentDateTimeUtc().toString("yyyy/MM/dd hh:mm:ss.zzz") + "]" +
         "[" + level + "]" +
-        message
+        message + "\n"
     );
 }
 
 QString lgs::utility::Logger::header()
 {
     return QString(
-        QApplication::tr("Logiscope software log file") + "\n" +
-        QApplication::tr("Created on ") + QDateTime::currentDateTime().toString() +
+        "\t\t" + QApplication::tr("Logiscope software log file") + "\n" +
+        QApplication::tr("Created on ") + QDateTime::currentDateTime().toString("yyyy/MM/dd hh:mm:ss.zzz") + "\n" +
         QApplication::tr("The format of the log -> [datetime] [log level] message") + "\n\n"
     );
 }
 
 void lgs::utility::Logger::log(LEVEL_EC level_ec, const QString &message)
 {
-    QFile file(lgs::global::LOG + "/log.txt");
-
-    if (!file.open(QIODevice::ReadWrite | QIODevice::Append))
+    QFile file(QApplication::applicationDirPath() + lgs::global::LOG + "/log.txt");
+    if (file.open(QIODevice::ReadWrite | QIODevice::Append | QIODevice::Text))
     {
         QTextStream stream(&file);
         if(file.size() == 0)
             stream << Logger::header();
 
-        stream << Logger::format(level_ec, message);
+        stream <<Logger::format(level_ec, message);
     }
 }
