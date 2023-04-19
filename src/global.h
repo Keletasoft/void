@@ -16,23 +16,23 @@
  */
 namespace lgs::global {
 
-    const QString PATH = QApplication::applicationDirPath();
+    static const QString ASSETS = "/assets";
 
-    const QString ASSETS = PATH + "/assets";
+    static const QString CONFIG = ASSETS + "/config";
+    static const QString I18N = CONFIG + "/i18n";
 
-    const QString CONFIG = ASSETS + "/config";
-    const QString I18N = CONFIG + "/i18n";
+    static const QString IMG = ASSETS + "/img";
 
-    const QString IMG = ASSETS + "/img";
+    static const QString STYLE = ASSETS + "/style";
 
-    const QString STYLE = ASSETS + "/style";
+    static const QString DATA = ASSETS + "/data";
 
-    const QString DATA = ASSETS + "/data";
+    static const QString TMP = ASSETS + "/tmp";
 
-    const QString TMP = ASSETS + "/tmp";
+    static const QString LOG = ASSETS + "/logs";
 
-    const QString LOG = ASSETS + "/logs";
+} // END NAMESPACE lgs::global
 
-} // END NAMESPACE lgs
+
 
 #endif // GLOBAL_H
